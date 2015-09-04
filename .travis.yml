@@ -15,7 +15,7 @@ install: pip install --upgrade pip setuptools
 script:
   - pip list
   - du -h $HOME/.cache/pip
-  - ll $HOME/.cache/pip/log
+  - ls -la $HOME/.cache/pip/log
 
 before_cache:
   - rm -f $HOME/.cache/pip/log/debug.log
