@@ -22,5 +22,4 @@ before_cache:
 cache:
   directories:
     - $HOME/.cache/pip
-  
 
