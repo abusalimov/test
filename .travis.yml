@@ -13,11 +13,13 @@ python:
 
 announce: echo FUUUUUUU
 
-install: pip install --upgrade pip setuptools
-after_install: pip --version
+install:
+  - pip install --upgrade pip setuptools
+  - pip --version
+  - pip list
 
 script:
-  - pip list
+  - echo OK
 
 cache:
   directories:
