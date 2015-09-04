@@ -10,9 +10,9 @@ python:
   - "nightly"
   - "pypy"
   - "pypy3"
+cache: pip
 
-script:
-  - pip install --upgrade pip setuptools
-  - pip list
+install: pip install --upgrade pip setuptools
+script: pip list
 
 
