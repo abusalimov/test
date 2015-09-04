@@ -11,15 +11,13 @@ python:
   - "pypy"
   - "pypy3"
 
-announce: echo FUUUUUUU
-
 install:
   - pip install --upgrade pip setuptools
   - pip --version
   - pip list
 
 script:
-  - echo OK
+  - cat "$BASH_SOURCE"
 
 cache:
   directories:
