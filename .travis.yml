@@ -10,7 +10,9 @@ python:
   - "nightly"
   - "pypy"
   - "pypy3"
-cache: pip
+cache:
+  directories:
+    - $HOME/.cache/pip
 
 install: pip install --upgrade pip setuptools
 script: pip list
