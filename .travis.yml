@@ -17,4 +17,4 @@ script:
 
 cache:
   directories:
-    $HOME/.cache/pip: true
+    - $HOME/.cache/pip/http
