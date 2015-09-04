@@ -17,6 +17,7 @@ script:
   - du -h $HOME/.cache/pip
 
 before_cache:
+  - ls -la $HOME/.cache/pip/log
   - rm -f  $HOME/.cache/pip/log/debug.log
   - ls -la $HOME/.cache/pip/log
 cache:
