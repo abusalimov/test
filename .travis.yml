@@ -11,4 +11,6 @@ python:
   - "pypy"
   - "pypy3"
 
-script:  pip list
+script: pip list
+
+
