@@ -10,10 +10,15 @@ python:
   - "nightly"
   - "pypy"
   - "pypy3"
+
+install: pip install --upgrade pip setuptools
+script:
+  - pip list
+  - du -h $HOME/.cache/pip
+
+before_cache:
+  - rm -f $HOME/.cache/pip/log/debug.log
 cache:
   directories:
     - $HOME/.cache/pip
-
-install: pip install --upgrade pip setuptools
-script: pip list
-
+  
