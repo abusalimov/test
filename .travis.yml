@@ -11,7 +11,11 @@ python:
   - "pypy"
   - "pypy3"
 
+announce: echo FUUUUUUU
+
 install: pip install --upgrade pip setuptools
+after_install: pip --version
+
 script:
   - pip list
 
