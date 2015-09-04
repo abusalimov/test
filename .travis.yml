@@ -11,6 +11,8 @@ python:
   - "pypy"
   - "pypy3"
 
-script: pip list
+script:
+  - pip install --upgrade pip setuptools
+  - pip list
 
 
