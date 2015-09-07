@@ -11,13 +11,16 @@ python:
   - "pypy"
   - "pypy3"
 
+before_install:
+  - cat "$BASH_SOURCE"
+
 install:
   - pip install --upgrade pip setuptools
   - pip --version
   - pip list
 
 script:
-  - cat "$BASH_SOURCE"
+  - source test.sh
 
 cache:
   directories:
