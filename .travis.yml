@@ -18,8 +18,10 @@ install:
   - pip install --upgrade pip setuptools
   - pip --version
   - pip list
+  - "FOO=BAR"
 
 script:
+  - echo $FOO
   - source test.sh
 
 cache:
