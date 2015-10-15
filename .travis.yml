@@ -17,6 +17,7 @@ before_install:
 install:
   - pip install --upgrade pip setuptools
   - pip --version
+  - pip install pytest-catchlog
   - pip list
 
 script:
