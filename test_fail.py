@@ -5,6 +5,9 @@ import sys
 
 def test_sth():
     for i in range(8):
-        print('{0}: boo!'.format(i),
-              file=(sys.stderr if i%2 else sys.stdout))
+        if i % 2:
+            print('{0}: meow'.format(i))
+        else:
+            print('{0}: barf!'.format(i), file=sys.stderr)
+
     assert False
