@@ -6,7 +6,7 @@ python:
   - "3.2"
   - "3.3"
   - "3.4"
-  - "3.5-dev"
+  - "3.5"
   - "nightly"
   - "pypy"
   - "pypy3"
@@ -18,11 +18,9 @@ install:
   - pip install --upgrade pip setuptools
   - pip --version
   - pip list
-  - "FOO=BAR"
 
 script:
-  - echo $FOO
-  - source test.sh
+  - py.test
 
 cache:
   directories:
