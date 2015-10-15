@@ -11,6 +11,9 @@ python:
   - "pypy"
   - "pypy3"
 
+install:
+  - pip install pytest-travis-fold
+
 script:
   - py.test
 
