@@ -12,7 +12,7 @@ python:
   - "pypy3"
 
 install:
-  - pip install pytest-travis-fold
+  - pip install https://github.com/abusalimov/pytest-travis-fold.git
 
 script:
   - py.test
