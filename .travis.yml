@@ -17,7 +17,7 @@ before_install:
 install:
   - pip install --upgrade pip setuptools
   - pip --version
-  - pip install pytest-catchlog
+  - pip install pytest-catchlog pytest-travis-fold
   - pip list
 
 script:
