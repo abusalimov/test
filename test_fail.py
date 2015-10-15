@@ -1,13 +1,10 @@
 from __future__ import absolute_import, division, print_function
 
-import logging
 import sys
 
 
-logger = logging.getLogger(__name__)
-
-
 def test_sth():
-    print('boo!', file=sys.stderr)
-    logger.error('awww')
+    for i in range(8):
+        print('{0}: boo!'.format(i),
+              file=(sys.stderr if i%2 else sys.stdout))
     assert False
