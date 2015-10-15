@@ -11,15 +11,6 @@ python:
   - "pypy"
   - "pypy3"
 
-before_install:
-  - cat "$BASH_SOURCE"
-
-install:
-  - pip install --upgrade pip setuptools
-  - pip --version
-  - pip install pytest-travis-fold
-  - pip list
-
 script:
   - py.test
 
