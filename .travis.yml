@@ -15,8 +15,7 @@ install:
   - pip install git+https://github.com/abusalimov/pytest-travis-fold.git
 
 script:
-  - py.test
-  - ./test.sh
+  - source test.sh
 
 cache:
   directories:
