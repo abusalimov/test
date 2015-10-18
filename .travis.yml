@@ -12,10 +12,10 @@ python:
   - "pypy3"
 
 install:
-  - pip install git+https://github.com/abusalimov/pytest-travis-fold.git
+  - pip install tox pytest-travis-fold
 
 script:
-  - source test.sh
+  - py.test
 
 cache:
   directories:
