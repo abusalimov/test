@@ -21,6 +21,7 @@ before_install:
   - cat "$BASH_SOURCE"
 
 install:
+  - pip list
   - pip install tox pytest-travis-fold
 
 script:
