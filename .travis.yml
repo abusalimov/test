@@ -16,12 +16,12 @@ env:
     - TOXENV="${TRAVIS_PYTHON_VERSION/[0-9].[0-9]/py${TRAVIS_PYTHON_VERSION/.}}"
   
 before_install:
-  - TOXENV11="${TRAVIS_PYTHON_VERSION/[0-9].[0-9]/py${TRAVIS_PYTHON_VERSION/.}}"
+  - export TOXENV11="${TRAVIS_PYTHON_VERSION/[0-9].[0-9]/py${TRAVIS_PYTHON_VERSION/.}}"
   - cat "$BASH_SOURCE"
 
 install:
   - pip install tox pytest-travis-fold
-  - TOXENV22="${TRAVIS_PYTHON_VERSION/[0-9].[0-9]/py${TRAVIS_PYTHON_VERSION/.}}"
+  - export TOXENV22="${TRAVIS_PYTHON_VERSION/[0-9].[0-9]/py${TRAVIS_PYTHON_VERSION/.}}"
 
 script:
   - env
