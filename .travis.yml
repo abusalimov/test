@@ -28,3 +28,9 @@ script:
 cache:
   directories:
     - $HOME/.cache/pip/http
+
+notifications:
+  email:
+    on_success: never
+    on_failure: never
+
