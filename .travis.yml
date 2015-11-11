@@ -19,15 +19,19 @@ env:
 before_install:
   - export TOXENV=${TRAVIS_PYTHON_VERSION/[0-9].[0-9]/py${TRAVIS_PYTHON_VERSION/.}}
   - cat "$BASH_SOURCE"
+  - env
 
 install:
   - pip list
   - pip install tox pytest-travis-fold
   - pip list
+  - virtualenv --version
+  - easy_install --version
+  - pip --version
+  - tox --version
 
 script:
-  - env
-  - tox -v
+  - tox
 
 cache:
   directories:
