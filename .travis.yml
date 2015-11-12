@@ -31,9 +31,10 @@ install:
   - easy_install --version
   - pip --version
   - tox --version
+  - alias tox="echo ${ANSI_GREEN}Running tox for TOXENV=$TOXENV${ANSI_RESET}; tox"
 
 script:
-  - echo -e ${ANSI_RED}${TOXENV}${ANSI_RESET}; tox -v || true
+  - tox -v || true
 
 cache:
   directories:
