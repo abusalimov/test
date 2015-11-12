@@ -26,13 +26,10 @@ install:
   - pip --version
   - tox --version
   - |
-    announce() {
-      echo -e "$ANSI_GREEN$@${ANSI_RESET}"
-    }
-    tox() {
-      announce "Running tox in TOXENV=$TOXENV"
-      env tox
-    }
+    function tox()
+      { announce "Running tox in TOXENV=$TOXENV"; env tox; }
+    function announce()
+      { echo -e "$ANSI_GREEN$@${ANSI_RESET}"; }
 
 script:
   - tox -v
