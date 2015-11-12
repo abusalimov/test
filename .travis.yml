@@ -25,7 +25,14 @@ install:
   - easy_install --version
   - pip --version
   - tox --version
-  - tox() { echo -e "${ANSI_GREEN}Running tox in TOXENV=$TOXENV${ANSI_RESET}"; env tox; }
+  - |
+    announce() {
+      echo -e "$ANSI_GREEN$@${ANSI_RESET}"
+    }
+    tox() {
+      announce "Running tox in TOXENV=$TOXENV"
+      env tox
+    }
 
 script:
   - tox -v
