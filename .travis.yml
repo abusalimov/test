@@ -13,8 +13,8 @@ python:
 
 env:
   matrix:
-    - TOX_COV=cover,codecov
-    - TOX_COV=nocov
+    - COVERAGE=cover,codecov
+    - COVERAGE=nocov
   
 before_install:
   - ls -la ~/virtualenv
@@ -33,6 +33,7 @@ install:
   - tox --version
 
 script:
+  - echo $TOXENV
   - tox -v || true
 
 cache:
