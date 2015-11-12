@@ -23,6 +23,7 @@ before_install:
 
 install:
   - pip list
+  - virtualenv --version
   - pip install tox pytest-travis-fold
   - pip list
   - virtualenv --version
