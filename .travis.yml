@@ -3,13 +3,7 @@ sudo: false
 language: python
 python:
   - "2.7"
-  - "3.2"
-  - "3.3"
   - "3.4"
-  - "3.5"
-  - "nightly"
-  - "pypy"
-  - "pypy3"
 
 env:
   matrix:
@@ -31,7 +25,7 @@ install:
   - easy_install --version
   - pip --version
   - tox --version
-  - tox() { echo "${ANSI_GREEN}Running tox in TOXENV=$TOXENV${ANSI_RESET}"; env tox; }
+  - tox() { echo -e "${ANSI_GREEN}Running tox in TOXENV=$TOXENV${ANSI_RESET}"; env tox; }
 
 script:
   - tox -v
