@@ -17,6 +17,7 @@ env:
     - TOX_COV=nocov
   
 before_install:
+  - ls -la ~/virtualenv
   - export TOXENV=${TRAVIS_PYTHON_VERSION/[0-9].[0-9]/py${TRAVIS_PYTHON_VERSION/.}}
   - cat "$BASH_SOURCE"
   - env
