@@ -33,8 +33,7 @@ install:
   - tox --version
 
 script:
-  - echo $TOXENV
-  - tox -v || true
+  - echo -e ${ANSI_RED}${TOXENV}${ANSI_RESET}; tox -v || true
 
 cache:
   directories:
