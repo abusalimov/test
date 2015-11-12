@@ -33,7 +33,7 @@ install:
   - tox --version
 
 script:
-  - tox
+  - tox -v || true
 
 cache:
   directories:
