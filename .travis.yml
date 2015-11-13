@@ -9,7 +9,14 @@ env:
   matrix:
     - COVERAGE=cover,codecov
     - COVERAGE=nocov
-  
+
+matrix:
+  include:
+    - python: "3.4"
+      env:
+        - TOXENV=check
+        - TOXENV=awwww
+
 before_install:
   - python --version
   - cat "$BASH_SOURCE"
