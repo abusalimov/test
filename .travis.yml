@@ -11,10 +11,8 @@ env:
     - COVERAGE=nocov
   
 before_install:
-  - ls -la ~/virtualenv
-  - export TOXENV=${TRAVIS_PYTHON_VERSION/[0-9].[0-9]/py${TRAVIS_PYTHON_VERSION/.}}
+  - python --version
   - cat "$BASH_SOURCE"
-  - env
 
 install:
   - pip list
@@ -25,7 +23,10 @@ install:
   - easy_install --version
   - pip --version
   - tox --version
-before_script: |
+before_script:
+  - export TOXENV=${TRAVIS_PYTHON_VERSION/[0-9].[0-9]/py${TRAVIS_PYTHON_VERSION/.}}
+  - env
+  - |
     function tox()
       { announce "Running tox in TOXENV=$TOXENV"; env tox; }
     function announce()
